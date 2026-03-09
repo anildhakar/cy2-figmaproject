@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Figmaland</title>
-
-<link rel="stylesheet" href="style.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figmaland</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="header">
+    <header class="header">
+        <nav class="navbar">
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Product</a>
+                <a href="#">Pricing</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            
+            <div class="logo">
+                <span class="logo-text">FIGMA</span><span class="logo-highlight">LAND</span>
+            </div>
+            
+            <div class="social">
+                <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+                <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </nav>
+        
+        <div class="hero-text">
+            <h1>The best products start with Figma</h1>
+            <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
+            <button>Try For Free</button>
+        </div>
+    </header>
 
-<nav class="navbar">
+    
+    <section class="features"> <!-- Features Section -->
+        <div class="container">
+            <h2>Features</h2>
+            <p class="subtitle">Most calendars are designed for teams.<br>Slate is designed for freelancers</p>
 
-<div class="menu">
-<a href="#">Home</a>
-<a href="#">Product</a>
-<a href="#">Pricing</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</div>
+            <div class="grid">
+                <div class="item">
+                    <div class="icon">
+                        <img src="feature-icon-1.png" alt="OpenType features">
+                    </div>
+                    <h3>OpenType features Variable fonts</h3>
+                    <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+                </div>
+                
+                <div class="item">
+                    <div class="icon">
+                        <img src="feature-icon-2.png" alt="Design with real data">
+                    </div>
+                    <h3>Design with real data</h3>
+                    <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+                </div>
+                
+                <div class="item">
+                    <div class="icon">
+                        <img src="feature-icon-3.png" alt="Fastest way to take action">
+                    </div>
+                    <h3>Fastest way to take action</h3>
+                    <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+                </div>
+            </div>
 
-<div class="logo">
-<span class="logo-text">FIGMA</span><span class="logo-highlight">LAND</span>
-</div>
-
-<div class="social">
-<a href="#"><img src="icons/twitter.svg" alt=""></a>
-<a href="#"><img src="icons/facebook.svg" alt=""></a>
-<a href="#"><img src="icons/linkedin.svg" alt=""></a>
-</div>
-
-</nav>
-
-<div class="hero-text">
-
-<h1>The best products start with Figma</h1>
-
-<p>
-Most calendars are designed for teams. Slate is designed for freelancers
-</p>
-
-<button>Try For Free</button>
-
-</div>
-
-</header>
+            <div class="video">
+                <div class="video-box">
+                    <img src="screen.png" alt="Woman reading book" class="video-img">
+                    <img src="play button.png" alt="Play button" class="play-btn">
+                </div>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
