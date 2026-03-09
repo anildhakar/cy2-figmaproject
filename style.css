@@ -59,14 +59,14 @@
     text-align: center;
 }
 .hero-text h1 { font-size: 70px; margin-bottom: 20px; line-height: 70px; }
-.hero-text p { font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: 70px; letter-spacing: 1.5px; }
+.hero-text p { font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: 72px; letter-spacing: 1.5px; }
 
 .hero-text button {
-    padding: 14px 35px;
+    padding: 8px 32px;
     background: #2091F9;
     border: none;
     color: white;
-    border-radius: 6px;
+    border-radius: 35px;
     cursor: pointer;
     /* transition: background 0.3s; */
 }
