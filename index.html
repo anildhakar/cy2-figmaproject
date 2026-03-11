@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <header class="header">
-        <nav class="navbar">
+    <header>
+        <nav>
             <div class="menu">
                 <a href="#">Home</a>
                 <a href="#">Product</a>
@@ -17,65 +16,115 @@
                 <a href="#">About</a>
                 <a href="#">Contact</a>
             </div>
-            
-            <div class="logo">
-                <span class="logo-text">FIGMA</span><span class="logo-highlight">LAND</span>
-            </div>
-            
+            <div class="logo">FIGMA<span>LAND</span></div>
             <div class="social">
-                <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
-                <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
-                <a href="#"><img src="icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="#"><img src="icons/twitter.svg" alt="T"></a>
+                <a href="#"><img src="icons/facebook.svg" alt="F"></a>
+                <a href="#"><img src="icons/linkedin.svg" alt="L"></a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
             </div>
         </nav>
-        
-        <div class="hero-text">
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#">Home</a>
+            <a href="#">Product</a>
+            <a href="#">Pricing</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="hero">
             <h1>The best products start with Figma</h1>
             <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
             <button>Try For Free</button>
         </div>
     </header>
 
-    
-    <section class="features"> 
-        <div class="container">
-            <h2>Features</h2>
-            <p class="subtitle">Most calendars are designed for teams.<br>Slate is designed for freelancers</p>
-
-            <div class="grid">
-                <div class="item">
-                    <div class="icon">
-                        <img src="feature-icon-1.png" alt="OpenType features">
-                    </div>
-                    <h3>OpenType features Variable fonts</h3>
-                    <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
-                </div>
-                
-                <div class="item">
-                    <div class="icon">
-                        <img src="feature-icon-2.png" alt="Design with real data">
-                    </div>
-                    <h3>Design with real data</h3>
-                    <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
-                </div>
-                
-                <div class="item">
-                    <div class="icon">
-                        <img src="feature-icon-3.png" alt="Fastest way to take action">
-                    </div>
-                    <h3>Fastest way to take action</h3>
-                    <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
-                </div>
+    <section class="features">
+        <h2>Features</h2>
+        <p>Most calendars are designed for teams.<br>Slate is designed for freelancers</p>
+        <div class="grid">
+            <div class="item">
+                <img src="feature-icon-1.png" alt="Icon">
+                <h3>OpenType features<br>Variable fonts</h3>
+                <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
             </div>
+            <div class="item">
+                <img src="feature-icon-2.png" alt="Icon">
+                <h3>Design with real data</h3>
+                <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+            </div>
+            <div class="item">
+                <img src="feature-icon-3.png" alt="Icon">
+                <h3>Fastest way to<br>take action</h3>
+                <p>Slate helps you see how many more days you need to work to reach your financial goal.</p>
+            </div>
+        </div>
+        <div class="video">
+            <img src="screen.png" alt="Video">
+            <img src="play button.png" alt="Play" class="play">
+        </div>
+    </section>
 
-            <div class="video">
-                <div class="video-box">
-                    <img src="screen.png" alt="Woman reading book" class="video-img">
-                    <img src="play button.png" alt="Play button" class="play-btn">
-                </div>
+    <section class="organize">
+        <div class="content">
+            <h2>Fastest way to organize</h2>
+            <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
+            <button>Try For Free</button>
+        </div>
+        <div class="image">
+            <img src="laptop.png" alt="Organize">
+        </div>
+    </section>
+
+    <section class="prototype">
+        <div class="image">
+            <img src="newsletter.png" alt="Prototyping">
+        </div>
+        <div class="content">
+            <h5>At your fingertips</h5>
+            <h2>Lightning fast prototyping</h2>
+            <p>Subscribe to our Newsletter</p>
+            <span>Available exclusively on Figmaland</span>
+            <div class="newsletter">
+                <input type="email" placeholder="Your Email">
+                <button>Subscribe</button>
             </div>
         </div>
     </section>
 
+    <script>
+        function toggleMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            
+            mobileMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        }
+
+        // Close menu when clicking on menu links
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+            
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    const hamburger = document.querySelector('.hamburger');
+                    
+                    mobileMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                });
+            });
+
+            // Close menu when clicking outside
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.addEventListener('click', function(e) {
+                if (e.target === mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    document.querySelector('.hamburger').classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
