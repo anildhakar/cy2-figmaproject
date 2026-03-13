@@ -363,6 +363,111 @@ h2 {
   }
 }
 
+
+/* Pricing Section Styles */
+.pricing-section {
+    background-color: #252B42; 
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+}
+
+.pricing-header h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.pricing-header p {
+    font-size: 18px;
+    margin-bottom: 60px;
+    opacity: 0.8;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    background: white;
+    color: #252B42;
+    padding: 40px 30px;
+    border-radius: 10px;
+    width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card.active {
+    background-color: #2091F9;
+    color: white;
+    padding: 60px 30px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.pricing-card h3 { font-size: 20px; margin-bottom: 10px; }
+.plan-desc { font-size: 14px; margin-bottom: 30px; max-width: 150px; }
+
+.price-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.amount { font-size: 60px; font-weight: bold; }
+.currency { text-align: left; }
+.symbol { display: block; font-size: 20px; font-weight: bold; }
+.period { font-size: 12px; opacity: 0.7; }
+
+.features-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.features-list li {
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.btn-card {
+    padding: 15px 40px;
+    background: #2091F9;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn-card.white {
+    background: white;
+    color: #2091F9;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .pricing-container {
+        flex-direction: column;
+    }
+    .pricing-card.active {
+        padding: 40px 30px; 
+        order: -1; 
+    }
+    .pricing-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     .menu, .social { display: none; }
