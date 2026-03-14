@@ -1,7 +1,8 @@
 * { margin: 0;
   padding: 0; 
   box-sizing: border-box; 
-  font-family: Arial; }
+  /* font-family: Arial; */
+ font-family: 'Poppins', sans-serif; }
 
 
 header { height: 100vh; 
@@ -221,7 +222,7 @@ nav { display: flex;
 h2 {
   font-size: 48px;
   margin-bottom: 16px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .subtitle {
