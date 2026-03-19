@@ -35,8 +35,8 @@
             <a href="#">Contact</a>
         </div>
         <div class="hero">
-            <h1>The best products start with Figma</h1>
-            <p>Most calendars are designed for teams. Slate is designed for freelancers</p>
+            <h1>The best products<br>start with Figma</h1>
+            <p>Most calendars are<br class="mobile-break">designed for teams. <span class="desktop-only">Slate is designed<br>for freelancers</span></p>
             <button>Try For Free</button>
         </div>
     </header>
@@ -145,6 +145,8 @@
                 <img src="avatar.png" alt="Avatar" class="avatar">
                 <div class="info">
                     <strong>Organize across</strong>
+                </div>
+                <div class="info">
                     <span>UI designer</span>
                 </div>
             </div>
@@ -224,6 +226,30 @@
             Most calendars are designed for teams.<br>
             Slate is designed for freelancers
         </p>
+        
+        <!-- Mobile Social Icons -->
+        <div class="contact-social">
+            <img src="icons/twitter.png" alt="Twitter">
+            <img src="icons/facebook.png" alt="Facebook">
+            <img src="icons/linkedin.png" alt="LinkedIn">
+        </div>
+        
+        <!-- Mobile Contact Info -->
+        <div class="contact-info-mobile">
+            <div class="contact-info-item">
+                <img src="location.png" alt="Location">
+                <p>6386 Spring St undefined Anchorage,<br>Georgia 12473 United States</p>
+            </div>
+            <div class="contact-info-item">
+                <img src="phone.png" alt="Phone">
+                <p>(843) 555-0130</p>
+            </div>
+            <div class="contact-info-item">
+                <img src="mail.png" alt="Email">
+                <p>willie.jennings@example.com</p>
+            </div>
+        </div>
+        
         <div class="contact-container">
             <div class="contact-form">
                 <h3>Contact Us</h3>
@@ -232,25 +258,25 @@
                 <textarea placeholder="Your Message"></textarea>
                 <button>Send</button>
             </div>
-            <div class="contact-info">
-                <div class="info">
-                    <div class="box">
-                        <img src="location.png" alt="Location">
+            <div class="contact-right">
+                <div class="contact-info-row">
+                    <div class="contact-item">
+                        <img src="location.png" alt="Location" class="contact-icon">
                         <p>6386 Spring St undefined Anchorage,<br>Georgia 12473 United States</p>
                     </div>
-                    <div class="box">
-                        <img src="phone.png" alt="Phone">
+                    <div class="contact-item">
+                        <img src="phone.png" alt="Phone" class="contact-icon">
                         <p>(843) 555-0130</p>
                     </div>
-                    <div class="box">
-                        <img src="mail.png" alt="Email">
+                    <div class="contact-item">
+                        <img src="mail.png" alt="Email" class="contact-icon">
                         <p>willie.jennings@example.com</p>
                     </div>
                 </div>
-                <div class="map">
+                <div class="map-section">
                     <img src="map.png" alt="Map">
                 </div>
-                <div class="social">
+                <div class="social-section">
                     <img src="icons/twitter.png" alt="Twitter">
                     <img src="icons/facebook.png" alt="Facebook">
                     <img src="icons/linkedin.png" alt="LinkedIn">
@@ -297,22 +323,19 @@
     </div>
 
     <div class="footer-contact">
-      <div class="contact-item">
+      <div class="contact-icons-column">
         <img src="location-icon.png" alt="Location" class="contact-icon">
-        <p>7480 Mockingbird Hill undefined</p>
-      </div>
-
-      <div class="contact-item">
         <img src="phone-icon.png" alt="Phone" class="contact-icon">
+      </div>
+      <div class="contact-text-column">
+        <p>7480 Mockingbird Hill undefined</p>
         <p>(239) 555-0108</p>
+        <div class="social-icons-inline">
+          <img src="twitter-icon.png" alt="Twitter" class="social-icon">
+          <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+          <img src="linkedin-icon.png" alt="LinkedIn" class="social-icon">
+        </div>
       </div>
-
-      <div class="social-icons">
-        <a href="#"><img src="twitter-icon.png" alt="Twitter" class="social-icon"></a>
-        <a href="#"><img src="facebook-icon.png" alt="Facebook" class="social-icon"></a>
-        <a href="#"><img src="linkedin-icon.png" alt="LinkedIn" class="social-icon"></a>
-      </div>
-      
     </div>
   </div>
 </footer>
@@ -343,7 +366,17 @@
                     document.querySelector('.hamburger').classList.remove('active');
                 }
             });
-        }); 
+       
+          // Close mobile menu on scroll
+            window.addEventListener('scroll', function() {
+                const mobileMenu = document.getElementById('mobileMenu');
+                const hamburger = document.querySelector('.hamburger');
+                if (mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+         }); 
     </script>
 </body>
 </html>
