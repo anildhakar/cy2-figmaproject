@@ -14,7 +14,7 @@ body {
 
 header { 
   height: 100vh; 
-  background: url("Rectangle 9.png") center/cover; 
+  background: url("images/Rectangle 9.png") center/cover; 
   color: white; 
   position: relative;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
@@ -290,6 +290,11 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
   margin: 0 auto;
 }
 
+/* Hide client name on desktop */
+.client-name {
+  display: none;
+}
+
 .partners-section h2 {
   font-size: 52px;
   margin-bottom: 17px;
@@ -332,56 +337,27 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
 }
 
 .partners-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0px;
-  row-gap: 5px;
-  margin-bottom: 80px;
-  max-width: 1050px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.partner-item {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px 2px;
-  background: white;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  /* border: 1px solid #e0e0e0; */
-  /* border-radius: 8px; */
-  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+  flex: 1 0 25%;    
 }
 
-.partner-item img {
-  max-width: 220px;
-  max-height: 100px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-}
+ 
+
+  
 
 /* Ensure no borders on partner images */
 .partners-section img,
-.partners-grid img,
-.partner-item img {
-  border: 0 !important;
-  outline: 0 !important;
-  box-shadow: none !important;
-}
+.partners-grid img {
+  border: 0;
+  outline: 0;
+  box-shadow: none;
   object-fit: contain;
 }
 
 
 /* Testimonials */
 .testimonials-section {
-  background: #f8f9fa;
+  background: #ffffff;
   padding: 80px 20px;
   text-align: center;
   max-width: 1200px;
@@ -459,8 +435,6 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
   margin: 0;
   text-align: left;
 }
-}
-}
 
 .testimonials-section .btn {
   background: #23A6F0;
@@ -472,7 +446,6 @@ nav { display: flex; justify-content: space-between; align-items: center; paddin
   border-radius: 35px;
   cursor: pointer;
   letter-spacing: 0.2px;
-}
   margin-right: auto;
 }
 
@@ -890,8 +863,8 @@ opacity:0.7;
 }
 
 .footer-contact .contact-icon {
-  width: 20px !important;
-  height: 20px !important;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
   flex-shrink: 0;
 }
@@ -917,8 +890,8 @@ opacity:0.7;
 }
 
 .footer-contact .social-icon {
-  width: 24px !important;
-  height: 24px !important;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
   cursor: pointer;
   transition: opacity 0.2s;
@@ -957,10 +930,12 @@ opacity:0.7;
   }
   
   .social-icons-inline .social-icon {
-    width: 30px !important;
-    height: 30px !important;
+    width: 30px;
+    height: 30px;
   }
 }
+
+.social-icon {
   object-fit: contain;
   cursor: pointer;
   transition: opacity 0.2s;
@@ -1202,40 +1177,22 @@ opacity:0.7;
     font-weight: 400;
   }
   .partners-grid { 
-    display: grid !important;
-    grid-template-columns: 1fr !important; 
-    gap: 25px !important; 
-    max-width: 100% !important;
-    margin-bottom: 50px !important;
-    justify-items: center !important;
-  }
-  .partner-item { 
-    padding: 15px 10px !important; 
-    box-sizing: border-box;
-    background: white;
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    border: none !important;
-    width: 100%;
-    max-width: 100% !important;
-  }
-  .partner-item img { 
-    max-width: 250px !important; 
-    max-height: 100px !important; 
-    width: auto; 
-    height: auto; 
-    object-fit: contain;
-    border: none !important;
-    outline: none !important;
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    max-width: 100%;
+    margin-bottom: 50px;
+    justify-items: center;
+    padding: 0 20px;
+  } 
+  .client-name {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 15px;
     display: block;
-    margin: 0 auto !important;
+    text-align: center;
   }
-  /* Show only first 3 partner items in mobile */
-  .partner-item:nth-child(n+4) {
-    display: none !important;
-  }
+  
   .partners-section .btn { 
     padding: 15px 40px; font-size: 14px; font-weight: 700; border: none; 
     border-radius: 35px; cursor: pointer; margin: 50px auto; display: block; 
@@ -1554,10 +1511,7 @@ opacity:0.7;
   
   .partners-section { padding: 60px 15px; }
   .partners-grid { gap: 15px; }
-  .partner-item { padding: 35px 15px; }
-  .partner-item img { max-width: 200px; max-height: 90px; }
-  .partner-item:nth-child(n+4) { display: none; }
-  
+     
   .testimonials-section { padding: 60px 15px; }
   .pricing-section { padding: 60px 15px; }
   .pricing-header h2 { font-size: 42px; }
@@ -1578,7 +1532,47 @@ opacity:0.7;
   .contact-item p { font-size: 15px; }
   .social-icons { gap: 18px; margin-top: 25px; }
 }
+@media (max-width: 767px) {
+  /* 1. Hide the entire second grid container */
+  .partners-grid:nth-of-type(2) {
+      display: none;
+  }
 
+  /* 2. Setup the first grid as a centered vertical stack */
+  .partners-grid:first-of-type {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px; /* Space between the 3 big images */
+  }
+
+  /* 3. Style the items for 1 column with no rounding or borders */
+  .partner-item {
+      flex: 0 0 100%;
+      max-width: 60%;
+      height: auto;
+      border: none;          /* Remove borders */
+      border-radius: 0;      /* Remove rounded corners */
+      padding: 0;
+      display: flex;
+      justify-content: center;
+  }
+
+  /* 4. Make images BIG and sharp (no radius) */
+  .partner-item img {
+      width: 150%;            /* Set to 100% for maximum size */
+      /* height: auto; */
+      max-height: none;      /* Override desktop height limits */
+      border-radius: 0;      /* Ensure images have sharp corners */
+      object-fit: contain;
+      display: block;
+  }
+
+  /* 5. Hide the 4th item in the first grid to keep exactly 3 rows */
+  .partners-grid:first-of-type .partner-item:nth-child(4) {
+      display: none;
+  }
+}
 /* Extra Small Mobile (max-width: 360px) */
 @media (max-width: 360px) {
   nav { padding: 15px 15px; }
@@ -1605,9 +1599,7 @@ opacity:0.7;
   
   .partners-section { padding: 50px 10px; }
   .partners-grid { gap: 8px; }
-  .partner-item { padding: 12px 8px; }
-  .partner-item img { max-width: 80px; max-height: 35px; }
-  
+    
   .testimonials-section { padding: 50px 10px; }
   .pricing-section { padding: 50px 10px; }
   .contact { padding: 50px 10px; }
@@ -1793,14 +1785,9 @@ opacity:0.7;
     max-width: 100%;
   }
   
-  .partner-item {
-    padding: 15px 10px;
-  }
+ 
   
-  .partner-item img {
-    max-width: 100px;
-    max-height: 40px;
-  }
+   
   
   /* Testimonials Section */
   .testimonials-section {
@@ -2067,9 +2054,7 @@ opacity:0.7;
   
   .partners-section { padding: 50px 10px; }
   .partners-grid { gap: 8px; }
-  .partner-item { padding: 12px 8px; }
-  .partner-item img { max-width: 80px; max-height: 35px; }
-  
+    
   .testimonials-section { padding: 50px 10px; }
   .pricing-section { padding: 50px 10px; }
   .contact { padding: 50px 10px; }
